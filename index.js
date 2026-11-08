@@ -1,3 +1,13 @@
+import { Telegraf } from 'telegraf';
+
+export default {
+  async fetch(request, env, ctx) {
+    const bot = new Telegraf(env.BOT_TOKEN);
+    
+    // Telegram webhook handle လုပ်ရန်
+    return await handleWebhook(request, bot);
+  }
+};
 const { Telegraf, Markup } = require('telegraf');
 const http = require('http');
 const axios = require('axios');
