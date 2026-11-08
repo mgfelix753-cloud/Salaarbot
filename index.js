@@ -4,8 +4,8 @@ const axios = require('axios');
 const { HttpsProxyAgent } = require('https-proxy-agent');
 const { SocksProxyAgent } = require('socks-proxy-agent');
 
-const BOT_TOKEN = 'Your_Bot_Token';
-const GITHUB_TOKEN = 'Your_Github_Token';
+const BOT_TOKEN = '9064050432:AAF43JE_7JLO3rUSnxtQ8UkRJaNi3J9HT98';
+const GITHUB_TOKEN = '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';
 const ADMIN_ID = "8702460710";
 const REPO_OWNER = "repo";
 const REPO_NAME = "Lord_of_barkness";
