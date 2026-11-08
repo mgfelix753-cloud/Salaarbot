@@ -1,13 +1,20 @@
-import { Telegraf } from 'telegraf';
+import { Telegraf, Markup } from 'telegraf';
 
 export default {
   async fetch(request, env, ctx) {
     const bot = new Telegraf(env.BOT_TOKEN);
     
-    // Telegram webhook handle လုပ်ရန်
-    return await handleWebhook(request, bot);
+    // Webhook update ကို လက်ခံရန်
+    if (request.method === 'POST') {
+      const update = await request.json();
+      await bot.handleUpdate(update);
+      return new Response('OK');
+    }
+    
+    return new Response('Salaarbot is running!');
   }
 };
+
 const { Telegraf, Markup } = require('telegraf');
 const http = require('http');
 const axios = require('axios');
