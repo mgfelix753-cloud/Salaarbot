@@ -14,7 +14,6 @@ export default {
     return new Response('Salaarbot is running!');
   }
 };
-
 const { Telegraf, Markup } = require('telegraf');
 const http = require('http');
 const axios = require('axios');
